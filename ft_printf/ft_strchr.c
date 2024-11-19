@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_of_p.c                              :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaimi <azaimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 11:41:12 by azaimi            #+#    #+#             */
-/*   Updated: 2024/11/17 23:42:06 by azaimi           ###   ########.fr       */
+/*   Created: 2024/10/21 21:45:21 by azaimi            #+#    #+#             */
+/*   Updated: 2024/11/19 17:29:07 by azaimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_strlen_nbrp(unsigned long n)
-{
-	int	count;
-
-	count = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		n = n / 16;
-		count++;
-	}
-	return (count);
-}
-
-int	ft_putnbr_base_of_p(unsigned long nbr, char *base)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen_nbrp(nbr);
-	if (nbr >= 16)
-		ft_putnbr_base_of_p(nbr / 16, base);
-	ft_putchar(base[nbr % 16]);
-	return (i + 2);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
 }

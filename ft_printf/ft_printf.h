@@ -6,7 +6,7 @@
 /*   By: azaimi <azaimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:17:21 by azaimi            #+#    #+#             */
-/*   Updated: 2024/11/17 13:52:43 by azaimi           ###   ########.fr       */
+/*   Updated: 2024/11/19 17:30:21 by azaimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_putnbr(long n);
 size_t	ft_strlen(const char *str);
 int		ft_putnbr_base_of_xs(unsigned int nbr, char *base);
 int		ft_putnbr_base_of_p(unsigned long nbr, char *base);
+char	*ft_strchr(const char *s, int c);
 
 #endif

@@ -4,7 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 HEADER = ft_printf.h
 
 SRC = ft_putchar.c ft_putnbr.c ft_putstr.c ft_printf.c \
-	ft_check.c ft_putnbr_base_of_xs.c ft_putnbr_base_of_p.c ft_strlen.c
+	ft_check.c ft_putnbr_base_of_xs.c ft_putnbr_base_of_p.c \
+	ft_strlen.c ft_strchr.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -24,4 +25,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: clean all re fclean
